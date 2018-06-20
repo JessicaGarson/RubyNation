@@ -82,7 +82,7 @@ We'll add this loop to the top of our song.
 
 ```ruby
 live_loop :sample_voice do
-  sample "/path/to/file.wave"
+  sample "/path/to/file.wav"
   sleep 5
 end
 ```
@@ -92,7 +92,7 @@ end
 We'll tweak this loop to create a strange effect.
 ```ruby
 live_loop :sample_voice do
-  sample "/path/to/file.wave", beat_stretch: 3, rate: 0.5
+  sample "/path/to/file.wav", beat_stretch: 3, rate: 0.5
   sleep 5
 end
 ```
