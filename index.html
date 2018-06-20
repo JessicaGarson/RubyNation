@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Generating Music Using Sonic Pi</title>
+
+    <meta name="description" content="Sonic Pi">
+    <meta name="author" content="Jessica Garson">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+
+    <div class="slides">
+        <section>
+            <h1>Generating Music Using Sonic Pi</h1>
+            <small>How I Learned Ruby by Becoming a Live Coding DJ</small>
+        </section>
+
+        <section>
+          <h2>Code</h2>
+          https://github.com/JessicaGarson/RubyNation
+        </section>
+
+        <section>
+          <h2>Slides</h2>
+          jessicagarson.com/RubyNation
+        </section>
+
+        <section>
+          <h2>Who is Messica Arson?</h2>
+          The story of how I became a live coding DJ.
+        </section>
+
+        <section>
+          <h2>What is Sonic Pi?</h2>
+          Sonic Pi is an IDE that allows us to interact with our computer as if we were using a synth.
+        </section>
+
+        <section>
+          <h2>Where can I get this?</h2>
+          You can download Sonic Pi at https://sonic-pi.net/
+        </section>
+
+        <section>
+          <h2>The documentation is in the IDE for you</h2>
+          I got started by just changing the examples.
+        </section>
+
+        <section>
+          <h2>Let's go on a tour of the IDE</h2>
+          We'll go through and see what the IDE looks like.
+        </section>
+
+        <section>
+          <h2>Basic syntax of a loop</h2>
+          <pre><code>
+            live_loop :name_your_loop do
+              synth :name_of_synth
+              sleep number
+            end
+          </pre></code>
+        </section>
+
+        <section>
+          <h2>Enough talk let's rock</h2>
+          <pre><code>
+            live_loop :lets_start do
+              synth :pretty_bell
+              sleep 0.25
+            end
+          </pre></code>
+        </section>
+
+        <section>
+          <h2>Let's add in a sample</h2>
+          <pre><code>
+            live_loop :lets_start do
+              synth :pretty_bell
+              sample :loop_safari
+              sleep 0.25
+            end
+          </pre></code>
+        </section>
+
+        <section>
+          <h2>Add an Element of Randomness</h2>
+          <pre><code>
+            live_loop :second do
+              synth :tri
+              sleep rand(0.0..1.0)
+            end
+          </pre></code>
+        </section>
+
+        <section>
+          <h2>Another loop for drums</h2>
+              <pre><code>
+                live_loop :drums do
+                  if one_in(5)
+                    sample :drum_cymbal_hard
+                    sleep 0.5
+                  else
+                    sample :drum_tom_mid_hard
+                    sleep 0.7
+                  end
+                end
+              </pre></code>
+        </section>
+
+        <section>
+          <h2>Melody</h2>
+          <pre><code>
+            live_loop :notes do
+              use_synth :square
+              n = (ring, :a3, :f2, :d2)
+              play n
+              sleep 0.75
+            end
+          <pre></code>
+        </section>
+
+        <section>
+          <h2>Let's record a sample</h2>
+          Do I have a volunteer to come up and record a sample.
+        </section>
+
+        <section>
+          <h2>What did that rate thing just do?</h2>
+          Rate means the rate to play back. The default is 1. If we set the rate to 2 this will play it back at double the normal speed. When we adjust the rate to 0.5, we slow it down to half of normal.
+        </section>
+
+        <section>
+          <h2>What about beat_stretch?</h2>
+          Beat_Stretch allows us to stretch or shrink the sample to match the number of beats
+        </section>
+
+        <section>
+          <h2>Adding distortion in</h2>
+          <pre><code>
+            live_loop :distort_all_the_things do
+              with_fx :distortion do
+                synth :tb303
+                sleep 5
+              end
+            end
+          </pre></code>
+        </section>
+
+        <section>
+          <h2>Attack</h2>
+          Attack is the portion of the envelope that represents the time taken for the amplitude to reach its maximum level. Essentially it is the initial build up of a sound.
+        </section>
+
+        <section>
+          <h2>Decay</h2>
+          The progressive reduction in amplitude of a sound over time. The decay phase starts as soon as the attack phase has reached its peak. In the decay phase, the signal level drops until it reaches the sustain level.
+        </section>
+
+        <section>
+          <h2>Let's adjust the attack and decay</h2>
+          We'll be adding to the existing loops we have.
+        </section>
+
+        <section>
+          <h2>Let's hear our song</h2>
+          What did we just make.
+        </section>
+
+        <section>
+          <h2>I got to interact with my computer like a child learning something new</h2>
+          There is something magical about hearing your computer make sounds
+        </section>
+
+        <section>
+          <h2>I can't wait to hear what you build</h2>
+          Email - jessica.garson@gmail.com
+          <p>
+          Twitter - @jessicagarson
+        </section>
+
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+
+</script>
+
+</body>
+</html>
