@@ -118,6 +118,9 @@ end
 ## If you want to download audio files of me screaming
 [You can download audio files used in this presentation](https://www.dropbox.com/sh/pwbg35vpq0r3bi4/AACVf9cxF_9P6LLPAs4-a6gTa?dl=0)
 
+## Code for the song we wrote together is here
+[In this folder you can find the code we wrote in the  talk](https://github.com/JessicaGarson/RubyNation/tree/master/sonic_pi_songs)
+
 ## I wrote about this for the Twilio blog
 [Here is a blog post I wrote on the topic](https://www.twilio.com/blog/2018/05/generating-music-with-sonic-pi-and-ruby.html)
 
