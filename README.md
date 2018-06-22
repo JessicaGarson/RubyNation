@@ -121,6 +121,9 @@ end
 ## Code for the song we wrote together is here
 [In this folder you can find the code we wrote in the  talk](https://github.com/JessicaGarson/RubyNation/tree/master/sonic_pi_songs)
 
+## If you want to hear the song we made 
+[The track is found here](https://messicaarson.bandcamp.com/track/rubynation)
+
 ## I wrote about this for the Twilio blog
 [Here is a blog post I wrote on the topic](https://www.twilio.com/blog/2018/05/generating-music-with-sonic-pi-and-ruby.html)
 
